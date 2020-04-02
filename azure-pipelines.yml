@@ -28,7 +28,7 @@ steps:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
-  continueOnError: true
+  enabled: false
   env:
     COUNTY: $(county)
     STATE: $(state)
