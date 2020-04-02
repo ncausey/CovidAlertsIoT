@@ -79,8 +79,8 @@ namespace CovidAlertsIoT
                 using (var csv = new CsvReader(new StringReader(csvData), CultureInfo.InvariantCulture))
                 {
                     var records = csv.GetRecords<CovidData>();
-                    int countyCases = records.Where(record => record.Combined_Key == "Butler, Ohio, US").Select((selector) => selector.Confirmed).First();
-                    int stateCases = records.Where(record => record.Province_State == "Ohio").Sum(selector => selector.Confirmed);
+                    int countyCases = records.Where(record => record.Combined_Key == county).Select((selector) => selector.Confirmed).First();
+                    int stateCases = records.Where(record => record.Province_State == state).Sum(selector => selector.Confirmed);
                     isCovidAlertCounty = countyCases > Constants.COUNTY_THRESHOLD;
                     isCovidAlertState = stateCases > Constants.STATE_THRESHOLD;
                 }
