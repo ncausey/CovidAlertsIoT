@@ -7,6 +7,6 @@
     public const double DATA_TIMER_HOURS = 2;
     public const int LIGHTS_TIMER_MILLISECONDS = 500;
 
-    public const int COUNTY_THRESHOLD = 100;
-    public const int STATE_THRESHOLD = 5000;
+    public const int COUNTY_THRESHOLD = 10000;
+    public const int STATE_THRESHOLD = 200000;
 }
